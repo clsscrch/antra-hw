@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px 00px;
+}
+
+#title {
+    font-size: 32px;
+}
+
+input {
+    padding: 8px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 6px rgb(137, 193, 237);
+    border: 2px solid rgb(137, 193,237);  
+    border-radius: 2px; 
+}
+
+#name, #password {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+    /* width: 100%; */
+    /* justify-content: space-evenly; */
+}
+
+.name-section, .password-section {
+    width: 40%;
+}
+
+#email, #number {
+    width: 97%;
+}
+
+#confirmation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#confirmation p {
+    font-size: small;
+    width: 65%;
+}
+
+#register {
+    background-color: rgb(66,139,202);
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 2px;
+    color: white;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#buttons button {
+    width: 40%;
+    padding: 10px 4px;
+}
+
+#register-button {
+    background-color: rgb(66,139,202);
+    border: rgb(66,139,202);
+    padding: 2px 6px;
+    border-radius: 2px;
+    color: white;
+    font-size: large;
+}
+
+#signin-button {
+    background-color: rgb(25, 205, 52);
+    border:  rgb(25, 205, 52);
+    padding: 2px 6px;
+    border-radius: 2px;
+    color: white;
+    font-size: large;
+}
