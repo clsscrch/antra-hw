@@ -98,12 +98,6 @@ const Model = ((api, view) => {
         set guessCount(count) {
             this._guessCount = count;
 
-            if (this._guessCount > 10) {
-                alert(`Game over! You have guessed ${this._wordCount} words!`);
-                console.log(this._currentWord);
-                return;
-            }
-
             let guessContainer = document.querySelector(domSelector.guessContainer);
             let template = view.createGuessCount(this._guessCount);
             view.render(guessContainer, template);
@@ -196,6 +190,12 @@ const Controller = ((view, model) => {
                 } else {
                     if (state.currentWord.indexOf(letterInput.value) === -1) {
                         state.guessCount++;
+                        if (state.guessCount > 10) {
+                            alert(`Game over! You have guessed ${state.wordCount} words!`);
+                            console.log(state.currentWord);
+                            init();
+                            return;
+                        }
                     } else {
                         let wordContainer = document.querySelector(domSelector.wordContainer);
                         let word = state.currentWord.split('');
